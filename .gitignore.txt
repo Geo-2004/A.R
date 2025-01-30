@@ -1,0 +1,27 @@
+# Directorio de dependencias de Composer (se genera automáticamente)
+vendor/
+
+# Archivos y carpetas temporales generadas por el sistema operativo
+Thumbs.db
+ehthumbs.db
+
+# Archivos de configuración de entornos de desarrollo
+.vscode/
+.idea/
+
+# Archivos de caché de la aplicación
+*.log
+
+# Archivos específicos de sistema de Windows
+*.bak
+*.swp
+
+# Archivos de configuración de usuarios
+*.env
+
+# Archivos de base de datos locales
+*.sql
+*.sqlite
+
+# Directorios y archivos que contienen configuraciones locales de servidores (si es necesario)
+.htaccess

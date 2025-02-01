@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+✅ Esto asegura que todas las rutas se redirijan a index.php, permitiendo que tu aplicación maneje rutas dinámicas.
+
+🔹 Paso 2: Confirmar y Subir los Cambios a Heroku
+Ejecuta estos comandos para subir el .htaccess a Heroku:
+
+bash
+Copiar
+Editar
+git add .htaccess
+git commit -m "Corrigiendo rutas en Heroku con .htaccess"
+git push heroku main
+🔹 Paso 3: Probar si funciona
+Ve a tu URL de Heroku y prueba las rutas que no funcionaban antes.
+Si el problema sigue, revisa los logs con:
+bash
+Copiar
+Editar
+heroku logs --tail
+Esto te dirá si hay un error con el servidor.
+🚀 Prueba y dime si ya funciona o si necesitas más ayuda. ¡Vamos a hacer que esto funcione! 💪

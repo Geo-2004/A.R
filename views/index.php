@@ -18,4 +18,6 @@
     <h1 class="text-center">Bienvenido a Reserva de Actividades</h1>
     <p class="text-center">Explora y reserva actividades recreativas de forma fácil y rápida.</p>
     <a href="login.php" class="text-center text-primary d-block">Inicio</a>
+    
 </div>
+

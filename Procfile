@@ -1,1 +1,1 @@
-web: npm start
+web: heroku-php-apache2 views/

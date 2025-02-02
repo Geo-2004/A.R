@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$dbname = "sistema_reservas";
+$host = "monorail.proxy.rlwy.net";
+$dbname = "railway";
 $username = "root";
-$password = "";
+$password = "bgBEHYeyMANIfNLxemFXuEVxJJvSIhaz";
 
 try {
     $conn = new
@@ -13,3 +13,4 @@ try {
     die("Error de conexión: " . $e->getMessage());
 }
 ?>
+//mysql://root:bgBEHYeyMANIfNLxemFXuEVxJJvSIhaz@monorail.proxy.rlwy.net:56165/railway

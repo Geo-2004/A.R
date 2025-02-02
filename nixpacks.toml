@@ -1,5 +1,0 @@
-[phases.setup]
-nixPkgs = ["php", "phpPackages.composer"]
-
-[start]
-cmd = "php -S 0.0.0.0:$PORT -t views"

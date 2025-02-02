@@ -1,0 +1,15 @@
+paths:
+    migrations: db/migrations
+    seeds: db/seeds
+
+environments:
+    default_migration_table: phinxlog
+    default_environment: production
+    production:
+        adapter: mysql
+        host: autorack.proxy.rlwy.net
+        name: railway
+        user: root
+        pass: fytUMsACDqOwEwVoVFzUaHIMgClrqNyO
+        port: 43443
+        charset: utf8

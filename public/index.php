@@ -1,4 +1,4 @@
 <?php
 require_once "controllers/UsuarioController.php";
-$usuarioController->registrarUsuario();
+require_once "../views/index.php";
 ?>

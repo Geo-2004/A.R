@@ -2,7 +2,8 @@ ReservaController: <?php
 require_once __DIR__ . "/../../config/correo.php";; // Importamos la función de envío de correo 
 require_once __DIR__ . "/../../config/database.php";; 
 
-session_start(); 
+session_start();
+
 global $conn;
  
 $conn = Database::getConnection();

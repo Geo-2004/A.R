@@ -1,37 +1,37 @@
 <?php
 
-require_once 'config/config.php'; // Ajustamos la ruta de config.php
+// Incluir configuración de la base de datos
+require_once 'config/database.php';
 
-$controller = 'Login'; // Controlador por defecto
-$method = 'index'; // Método por defecto
-$params = [];
+// Obtener la URL de la solicitud
+$request = trim($_SERVER['REQUEST_URI'], '/');
 
-if (isset($_GET['url'])) {
-    $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
+// Definir rutas y requerir los archivos correctos
+switch ($request) {
+    case '':
+    case 'login':
+        require 'app/controllers/LoginController.php';
+        break;
 
-    if (!empty($url[0])) {
-        $controller = ucfirst($url[0]) . 'Controller';
-    }
+    case 'logout':
+        require 'app/controllers/LogoutController.php';
+        break;
 
-    if (!empty($url[1])) {
-        $method = $url[1];
-    }
+    case 'usuarios':
+        require 'app/controllers/UsuariosController.php';
+        break;
 
-    $params = array_slice($url, 2);
+    case 'reservas':
+        require 'app/controllers/ReservasController.php';
+        break;
+
+    case 'actividades':
+        require 'app/controllers/ActividadesController.php';
+        break;
+
+    default:
+        http_response_code(404);
+        echo "Página no encontrada";
+   break;
 }
-
-// Ruta al controlador
-$controllerPath = "app/controllers/$controller.php";
-
-if (file_exists($controllerPath)) {
-    require_once $controllerPath;
-    $controller = new $controller();
-
-    if (method_exists($controller, $method)) {
-        call_user_func_array([$controller, $method], $params);
-    } else {
-        echo "Error: Método '$method' no encontrado en el controlador '$controller'.";
-    }
-} else {
-    echo "Error: Controlador '$controller' no encontrado.";
-}
+?>

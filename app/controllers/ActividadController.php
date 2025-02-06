@@ -4,9 +4,11 @@ global $conn;
  
 $conn = Database::getConnection();
 session_start(); 
+
 if (!isset($_SESSION["usuario_id"]) || $_SESSION["tipo_usuario"] !== "administrador") { 
 header("Location: ../views/dashboard.php"); 
 exit(); 
+
 } 
 // Agregar nueva actividad 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["agregar"])) { 
@@ -31,4 +33,5 @@ header("Location: ../views/gestionar_actividades.php?mensaje=Actividad eliminada
 header("Location: ../views/gestionar_actividades.php?error=No se pudo eliminar la actividad"); 
 } 
 } 
+
 ?> 

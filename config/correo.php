@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../vendor/autoload.php'; // Cargar automáticamente las librerías
+require '../../vendor/autoload.php'; // Cargar automáticamente las librerías
 
 function enviarCorreo($destinatario, $asunto, $mensaje) {
     $mail = new PHPMailer(true);

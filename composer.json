@@ -3,6 +3,9 @@
       "php": "^8.0",
       "ext-mbstring": "*",
       "ext-openssl": "*",
-        "phpmailer/phpmailer": "^6.9"
+        "phpmailer/phpmailer": "^6.9",
+        "robmorgan/phinx": "^0.14.0",
+        "symfony/yaml": "^6.0"
+        
     }
   }

@@ -1,3 +1,3 @@
 <?php
-require_once '../router.php'; // Redirige al sistema
+require_once __DIR__.'../router.php'; // Redirige al sistema
 ?>

@@ -1,2 +1,2 @@
 [phases.setup]
-nixPkgs = ["php82", "git"]
+nixPkgs=["php82","git"]

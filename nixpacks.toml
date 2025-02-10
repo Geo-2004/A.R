@@ -1,6 +1,2 @@
-{ pkgs }: {
-  deps = [
-    pkgs.php82
-    pkgs.git
-  ];
-}
+[phases.setup]
+nixPkgs = ["php82", "git"]

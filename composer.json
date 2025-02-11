@@ -1,7 +1,6 @@
 {
     "require": {
-      "php": "^7.4",
-       "some/package": "^1.o",
+      "php": "^8.0",
       "ext-pdo": "*",
       "ext-openssl": "*",
         "phpmailer/phpmailer": "^6.9",
